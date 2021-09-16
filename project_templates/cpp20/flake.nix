@@ -48,6 +48,7 @@
 
               shellHook = let
                 icon = "f121";
+                triangle = "E0B0";
               in ''
                 export DEBUG_FLAGS="\
                 -g3 \
@@ -100,7 +101,8 @@
                 # Usage: mycppcheck main.cpp
                 alias mycppcheck="cppcheck --enable=all --std=c++20"
 
-                export PS1="$(echo -e '\u${icon}') {\[$(tput sgr0)\]\[\033[38;5;228m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]} \\$ \[$(tput sgr0)\]"
+                #export PS1="$(echo -e '\u${icon}') {\[$(tput sgr0)\]\[\033[38;5;228m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]} \\$ \[$(tput sgr0)\]"
+                export PS1="\n\[\033[1;42;97m\] $(echo -e '\u${icon}') \w \[\033[0m\]\[\033[1;32m\]$(echo -e '\u${triangle}')\[\033[0m\] \[$(tput sgr0)\]"
               '';
             };
           }
