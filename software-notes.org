@@ -1,0 +1,80 @@
+
+
+Cursed Steam
+
+++++++ Cursed Discord ++++++
+(will have to create custom browser)
+could also use discord framework
+
+javascript interpretter for the command lines using curses
+
+Simulation (like traffic and parking garage)
+
+3d engine
+
++++ debugger +++
+
+++ Data structures: red black tree, concurent hashmap ++
+
+Note taking app
+
+Clock app
+
+calendar app that accepts google calendar exports and can export to it
+
+todo list
+
+NixOS stuff
+
+Implement the TCP Protocol
+
+Vim office. Office program with vim control. Vim based office program.
+
+Rewrite dwm in modern c++
+
+* Installation scripts for:
+** NetBSD
+** Rocky Linux
+** Debian
+
+   
+* Nix inspired project manager/backup manager
+** Backs up files to a local directory
+** 100% offline
+** nipm new-gen will create a new generation
+** nipm rollback will rollback to the last generation
+** not located in the current folder so it won't plague any git repos
+** backups located in a 'backup' folder. you won't ever have to go into the folder
+** switching generations is as easy as a command. no files will be created in the project directory
+** files from generations will be switched out easily and quickly
+** will keep track of generations using a hash, like nix
+** allows for a description of each generation
+** nipm tree (or something similar) allows you to see a history of all generations with a description
+** nipm create will tell nipm to start keeping track of the current folder
+** what does this do that git can't already do?
+*** Not just for projects. Useful for local personal files that you do not want to put on the cloud.
+** integration with nix inspired file manager
+** will be able to organize files in a specific way that you want. able to take lua scripts
+** C++/Lisp/Lua
+
+* Cloud based software
+** runs off a real server
+** experience deploying an app
+** maybe a web based app
+** cory backup service?
+** encription?
+
+
+* First for practice make an application launcher written in Common Lisp with some C++ where needed
+** lua extension support
+
+* NetBSD functional declaration
+** immutability
+** reproducability
+** written in pure lisp for reproducability
+** inspired by nixos's declarability
+** manage custom binaries
+*** or manage custom build instructions for custom binaries
+** manage dotfiles
+*** manage rice
+*** all dotfiles in one place
