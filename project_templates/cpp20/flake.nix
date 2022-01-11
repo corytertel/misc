@@ -49,6 +49,17 @@
               shellHook = let
                 icon = "f121";
                 triangle = "E0B0";
+                black = "\\e[0;30m";
+                red = "\\e[0;31m";
+                green = "\\e[0;32m";
+                yellow = "\\e[0;33m";
+                blue = "\\e[0;34m";
+                magenta = "\\e[0;35m";
+                cyan = "\\e[0;36m";
+                white = "\\e[0;37m";
+                bold = "\\e[1m";
+                uline = "\\e[4m";
+                reset = "\\e[0m";
               in ''
                 export DEBUG_FLAGS="\
                 -g3 \
@@ -62,6 +73,7 @@
                 -Wall \
                 -Wextra \
                 -Werror \
+                -Wreturn-type \
                 -Wpedantic \
                 -Wvla \
                 -Wextra-semi \
@@ -69,7 +81,6 @@
                 -Wswitch-enum \
                 -Wsuggest-override \
                 -O \
-                -MMD \
                 -MP \
                 -Wno-gnu-include-next \
                 -Wno-unused-variable \
@@ -102,7 +113,9 @@
                 alias mycppcheck="cppcheck --enable=all --std=c++20"
 
                 #export PS1="$(echo -e '\u${icon}') {\[$(tput sgr0)\]\[\033[38;5;228m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]} \\$ \[$(tput sgr0)\]"
-                export PS1="\n\[\033[1;43;30m\] $(echo -e '\u${icon}') \w \[\033[0m\]\[\033[1;33m\]$(echo -e '\u${triangle}')\[\033[0m\] \[$(tput sgr0)\]"
+                #export PS1="\n\[\033[1;43;30m\] $(echo -e '\u${icon}') \w \[\033[0m\]\[\033[1;33m\]$(echo -e '\u${triangle}')\[\033[0m\] \[$(tput sgr0)\]"
+                export PS1="╭╴${red}$(echo -e '\u${icon} DEV') ${reset}${yellow}${bold}\W${reset} ${green}${uline}\$(git rev-parse --abbrev-ref HEAD 2>/dev/null)${reset}
+╰─λ "
               '';
             };
           }

@@ -78,3 +78,14 @@ Rewrite dwm in modern c++
 ** manage dotfiles
 *** manage rice
 *** all dotfiles in one place
+
+
+Algorithms first, not code structure
+Package all related data in similar data structures
+  For example, if a function in c++ always relies on a variable and a side effect of that
+  variable, then you can make a function object with that variable in it
+  Make structs when appropriate, but don't over use it. Don't be afraid to make structs.
+  Too little structs is primitive obsession.
+  Make algorithms first, then refactor later into collections
+Easy to read syntax
+Every function does exactly one thing well, and one thing only
